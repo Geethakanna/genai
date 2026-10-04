@@ -1,0 +1,11 @@
+fastapi==0.141.1
+uvicorn==0.53.0
+httpx==0.28.1
+pydantic==2.13.5
+cryptography==46.0.6
+keyring==25.7.0
+python-dotenv==1.2.2
+google-auth==2.58.0
+google-auth-oauthlib==1.4.1
+google-api-python-client==2.200.0
+pytest>=8.0

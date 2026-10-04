@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "guardianai"
+version = "0.2.0"
+description = "Local runtime security gateway between AI agents and the tools they use"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.110", "uvicorn>=0.29", "httpx>=0.27", "pydantic>=2.6",
+  "cryptography>=42", "keyring>=25", "python-dotenv>=1.0",
+  "google-auth>=2.29", "google-auth-oauthlib>=1.2", "google-api-python-client>=2.120",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+guardianai = "guardianai.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+guardianai = ["data/*.json"]
